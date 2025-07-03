@@ -1,4 +1,3 @@
-
 Neki podaci nisu ispravni (EndTimeUtc je pre StarTimeUtc ili je polje EmployeeName null).
 U slucaju sa vremenom moze se koristiti pretpostavka da je zamenjeno pocetno i krajnje vreme i onda koristiti apsolutnu vrednost razlike.
 U oba slucaja sam postavio warning u konzolu sa ID-em da bi se pronasla greska (Angular) i zanemario te sate.
