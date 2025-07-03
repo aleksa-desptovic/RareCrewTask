@@ -1,0 +1,24 @@
+<body style="text-align: center;">
+    <br><br><br><br>
+    <table>
+         <thead>
+    <tr>
+      <th>Name</th>
+      <th>Total time</th>
+    </tr>
+  </thead>
+        <tr *ngFor="let employee of processedEntries" [ngStyle]="{'background-color': employee.hours < 100 ? '#FF7F7F':'white' }">
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.hours | number:'1.0-2' }} hrs</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <div class="myChart" *ngIf="processedEntries.length">
+        <canvas baseChart
+        [data]="pieChartData"
+        [options]="pieChartOptions"
+        [type]="'pie'">
+        </canvas>
+    </div>
+</body>
